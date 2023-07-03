@@ -20,6 +20,10 @@ public class Task_lesson_3 {
             System.out.print(item + " ");
         }
 
+        System.out.println("\nМинимальное значение - " + MinValue(list));
+        System.out.println("Максимальное значение - " + MaxValue(list));
+        System.out.printf("Среднее значение - %.3f", AvgValue(list));
+
 
     }
 
@@ -40,17 +44,36 @@ public class Task_lesson_3 {
 
     static int MinValue(ArrayList<Integer> list)
     {
-        return 0;
+        int min = Integer.MAX_VALUE;
+        for(int item : list)
+        {
+            if (item < min)
+                min = item;
+        }
+        return min;
     }
 
     static int MaxValue(ArrayList<Integer> list)
     {
-        return 0;
+        int max = Integer.MIN_VALUE;
+        for(int item : list)
+        {
+            if (item > max)
+                max = item;
+        }
+        return max;
     }
 
     static double AvgValue(ArrayList<Integer> list)
     {
-        return 0;
+
+        int sum = 0;
+        for(int item : list)
+        {
+            sum += item;
+        }
+        return sum * 1.0 / list.size();
+
     }
 
 
