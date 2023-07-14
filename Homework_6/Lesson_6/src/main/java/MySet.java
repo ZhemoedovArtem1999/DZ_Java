@@ -20,13 +20,19 @@ public class MySet<T> {
         return map.remove(value)==nullValue;
     }
 
+
+    @Override
+    public String toString() {
+        return map.keySet().toString();
+    }
+
     public T get(int index) {
          return (T)map.keySet().toArray()[index]; // map.keySet().(index);
     }
 
-    public String toString()
+    //public String toString()
     {
-        return map.keySet().toString();
+       // return map.keySet().toString();
     }
 
     public Iterator<T> iterator ()
